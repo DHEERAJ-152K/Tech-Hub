@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+
+
+<div class="home">
+<div class="homeIntro">
+  <h1 class="">Welcome to BlogFolio!...</h1>
+  <p><%= startingContent %></p>
+</div>
+  <img class="blogsiteimg" src="/images/6263767_3236268.svg" alt="blogImage" width="45%">
+</div>
+
+<h2>-----Our posts-----</h2>
+<%  %>
+   <% posts.forEach(function (post){%>
+    <h3><%= post.title %></h3>
+  <% var shortpost=post.post.substring(0,200); %>
+<p>  <%= shortpost + " ...."%><a href="/posts/<%= post.title %>">Read more</a></p>
+
+    <%});%>
+
+
+
+<%- include('partials/footer') %>
